@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="Convex admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+    <meta name="keywords" content="admin template, Convex admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="PIXINVENT">
+    <title>TIS - Training Information System</title>
+    <link rel="apple-touch-icon" sizes="60x60" href="app-assets/img/ico/apple-icon-60.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="app-assets/img/ico/apple-icon-76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="app-assets/img/ico/apple-icon-120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="app-assets/img/ico/apple-icon-152.png">
+    <link rel="shortcut icon" type="image/x-icon" href="./app-assets/img/ico/favicon.ico">
+    <link rel="shortcut icon" type="image/png" href="./app-assets/img/ico/favicon-32.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900%7CMontserrat:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./app-assets/fonts/feather/style.min.css">
+    <link rel="stylesheet" type="text/css" href="./app-assets/fonts/simple-line-icons/style.css">
+    <link rel="stylesheet" type="text/css" href="./app-assets/fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./app-assets/vendors/css/perfect-scrollbar.min.css">
+    <link rel="stylesheet" type="text/css" href="./app-assets/vendors/css/prism.min.css">
+    <link rel="stylesheet" type="text/css" href="./app-assets/vendors/css/chartist.min.css">
+    <link rel="stylesheet" type="text/css" href="./app-assets/css/app.css">
+    <link rel="stylesheet" type="text/css" href="./app-assets/css/templatestyle.css">
+    <link rel="stylesheet" type="text/css" href="./app-assets/vendors/css/toastr.css">
+    <link rel="stylesheet" type="text/css" href="./app-assets/vendors/css/sweetalert2.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900%7CMontserrat:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./app-assets/fonts/simple-line-icons/style.css">
+
+
+</head>
+<body data-col="2-columns" class=" 2-columns ">
+<!-- ////////////////////////////////////////////////////////////////////////////-->
+<div class="wrapper">
+
+
+    <div data-active-color="black" data-background-color="white" data-image="" class="app-sidebar">
+        <div class="sidebar-header">
+            <img src="assets/img/greenstar_logo.jpg" alt="TCI" width="205" height="107">
+        </div>
+        <div class="sidebar-content">
+            <div class="nav-container">
+
+                <ul id="main-menu-navigation" data-menu="menu-navigation" class="navigation navigation-main">
+                    <li class="nav-item">
+                        <a id="dashboard_menu"  data-tablename="dashboard" data-primarykeycolumn="ID" class="menu-item"><i class="icon-home"></i><span data-i18n="" class="menu-title">Dashboard</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="training_menu"  data-tablename="training" data-primarykeycolumn="ID" class="menu-item"><i class="ft-activity"></i><span data-i18n="" class="menu-title">Add Training</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="report_menu"  data-tablename="report" class="menu-item"><i class="fa-regular fa-clipboard"></i><span data-i18n="" class="menu-title">Reports</span></a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-faded">
+        <div class="container-fluid">
+
+
+
+            <h4 class="navbar-header font-weight-bold">
+
+
+            </h4>
+            <h5 class="navbar-header font-weight-bold">
+
+            </h5>
+
+            <button type="button" data-toggle="collapse" class="navbar-toggle d-lg-none float-left">
+                <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span
+                    class="icon-bar"></span><span class="icon-bar"></span></button>
+
+            <span class="d-lg-none navbar-right navbar-collapse-toggle"><a class="open-navbar-container"><i class="ft-more-vertical"></i></a></span>
+
+            <div class="navbar-container">
+                <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="dropdown nav-item mr-0 float-right"><a id="dropdownBasic3" href="#" data-toggle="dropdown" class="nav-link position-relative dropdown-user-link dropdown-toggle"><span class="avatar avatar-online"><img id="navbar-avatar" src="./app-assets/img/portrait/small/avatarMale.jpg" alt="avatar"/></span>
+                            <p class="d-none">User Settings</p></a>
+                            <div aria-labelledby="dropdownBasic3" class="dropdown-menu dropdown-menu-right">
+                                <div class="arrow_box_right">
+                                    <a href="javascript:;" class="dropdown-item btnLogout"><i class="ft-power mr-2"></i><span>Logout</span></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="admin_main_container" class="main-panel">
+        <section id="dashboard_main_form" class="main-content hide_block">
+            <div class="content-wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-6 col-12">
+                            <div class="card bg-success">
+                                <div class="card-body">
+                                    <div class="px-3 py-3">
+                                        <div class="media">
+                                            <div class="align-center">
+                                                <i class="icon-pencil text-white font-large-2 float-left"></i>
+                                            </div>
+                                            <div class="media-body text-white text-right">
+                                                <h3 class="text-white">15</h3>
+                                                <span>Training Forms</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-12">
+                            <div class="card bg-danger">
+                                <div class="card-body">
+                                    <div class="px-3 py-3">
+                                        <div class="media">
+                                            <div class="align-center">
+                                                <i class="icon-user text-white font-large-2 float-left"></i>
+                                            </div>
+                                            <div class="media-body text-white text-right">
+                                                <h3 class="text-white">11</h3>
+                                                <span>Registered Participants</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <section id="training_main_form" class="main-content hide_block">
+            <div class="content-wrapper">
+                <div class="container-fluid"><div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="content-header">TIS Form Entry</h2>
+                    </div>
+                </div>
+                    <div class="card">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item dataentry-tab mappingtable" data-tablename="Training" data-primarykeycolumn="ID"
+                                data-dropdown1="participantId" data-joiningtablename1 = "Registration" data-joiningcolumnname1="id" data-joiningcolumnvalue1 = "name&contactNumber&designation&gender"
+                                data-dropdown2="themeId" data-joiningtablename2 = "Theme" data-joiningcolumnname2="id" data-joiningcolumnvalue2 = "name"
+                            >
+                                <a class="nav-link" id="base-tabX1" data-toggle="tab" aria-controls="tab1" href="#tab1" aria-expanded="false">Training Form</a>
+                            </li>
+                            <li class="nav-item dataentry-tab" data-tablename="Registration" data-primarykeycolumn="ID">
+                                <a class="nav-link" id="base-tabX2" data-toggle="tab" aria-controls="tab2" href="#tab2" aria-expanded="false">Registration</a>
+                            </li>
+                            <li class="nav-item dataentry-tab" data-tablename="Theme" data-primarykeycolumn="ID">
+                                <a class="nav-link" id="base-tabX3" data-toggle="tab" aria-controls="tab3" href="#tab3" aria-expanded="false">Theme</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content px-1 pt-1">
+                            <div class="tab-pane  active show" id="tab1" aria-labelledby="base-tabX1">
+                                <div class="content-wrapper">
+                                    <div class="container-fluid"><div class="row">
+                                        <div class="col-sm-12">
+                                            <h2 class="content-header">Training Form</h2>
+                                        </div>
+                                    </div>
+                                        <!-- Input Validation start -->
+                                        <section class="input-validation">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <div class="card-block">
+                                                                <form id="formTraining" class="dataentry_form form-horizontal was-validated">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-6 col-md-12">
+                                                                            <div class="form-group">
+                                                                                <h5>Theme <span class="required">*</span></h5>
+                                                                                <div class="controls">
+                                                                                    <select id="inpTrainingthemeId" name="interested" class="form-control divTrainingthemeId training_themeid_select" data-isPopulated="false" required>
+                                                                                        <option value="" selected="">Select Theme</option>
+                                                                                    </select>
+                                                                                    <div class="valid-feedback">Good to Go!</div>
+                                                                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                                                                    <div class="help-block"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <h5>Training Venue <span class="required">*</span></h5>
+                                                                                <div class="controls">
+                                                                                    <input id="inpTrainingvenue" type="text" name="text" class="form-control" required data-validation-required-message="This field is required">
+
+                                                                                    <div class="valid-feedback">Good to Go!</div>
+                                                                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <h5>From Date <span class="required">*</span></h5>
+                                                                                <div class="controls">
+                                                                                    <input type="date" id="inpTrainingfromDate" class="form-control" name="date" required>
+                                                                                    <div class="valid-feedback">Good to Go!</div>
+                                                                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <h5>To Date <span class="required">*</span></h5>
+                                                                                <div class="controls">
+                                                                                    <input type="date" id="inpTrainingtoDate" class="form-control" name="date" required>
+                                                                                    <div class="valid-feedback">Good to Go!</div>
+                                                                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="form-group">
+                                                                                <h5>Total Score <span class="required">*</span></h5>
+                                                                                <div class="controls">
+                                                                                    <input type="number" id="inpTrainingtotalScore" class="form-control" name="date" required>
+                                                                                    <div class="valid-feedback">Good to Go!</div>
+                                                                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="form-group">
+                                                                                <h5>Select Trainee / Trainer <span class="required">*</span></h5>
+                                                                                <div class="controls divTrainingparticipantId">
+
+                                                                                </div>
+                                                                                <div class="controls">
+                                                                                    <div class="form-group">
+                                                                                        <h5>Partipant's Pre-Score <span class="required">*</span></h5>
+                                                                                        <div class="controls">
+                                                                                            <input id="inpTrainingParticipantMappingpreScore" type="number" name="text" value="0" class="form-control" required data-validation-required-message="This field is required">
+
+                                                                                            <div class="valid-feedback">Good to Go!</div>
+                                                                                            <div class="invalid-feedback">Please fill out this field.</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="form-group">
+                                                                                        <h5>Partipant's Post-Score <span class="required">*</span></h5>
+                                                                                        <div class="controls">
+                                                                                            <input id="inpTrainingParticipantMappingpostScore" type="number" name="text" value="0" class="form-control" required data-validation-required-message="This field is required">
+
+                                                                                            <div class="valid-feedback">Good to Go!</div>
+                                                                                            <div class="invalid-feedback">Please fill out this field.</div>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div class="col-lg-6 col-md-12">
+                                                                                        <div data-tablename="Training" class="block-button btnAddParticipants">
+                                                                                            <a class="btn btn-success btn-lg btn-block">Add</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="row">
+                                                                                    <div id="TrainingparticipantList" class="panel-body participantList">
+                                                                                        <ul  class="list-group">
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <h5>Training Organized By <span class="required">*</span></h5>
+                                                                                <div class="controls">
+                                                                                    <input id="inpTrainingorganizedBy" type="text" name="text" class="form-control" required data-validation-required-message="This field is required">
+
+                                                                                    <div class="valid-feedback">Good to Go!</div>
+                                                                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-lg-6 col-md-12">
+                                                                            <div class="block-button">
+                                                                                <a id="btnAddTraining" type="reset" data-tablename="Training" data-columns="id*themeId*venue*fromDate*toDate*organizedBy*UPDATE_BY*UPDATE_DATE" data-primarykeycolumn="ID" class="btn btn-success btn-lg btn-block btnAddForm">Add</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                                <section class="extended">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-12">
+                                                                            <div class="card">
+                                                                                <div class="card-header">
+                                                                                    <div class="card-title-wrap bar-success">
+                                                                                        <h4 class="card-title">Data Entered</h4>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="card">
+                                                                                    <div class="card-body">
+                                                                                        <div id="training_div_content" class="card-block">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </section>
+
+                                        <!-- Input Validation end -->
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab2" aria-labelledby="base-tabX2">
+                                <div class="content-wrapper">
+                                    <div class="container-fluid"><div class="row">
+                                        <div class="col-sm-12">
+                                            <h2 class="content-header">Registration</h2>
+                                        </div>
+                                    </div>
+                                        <!-- Input Validation start -->
+                                        <section class="input-validation">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <div class="card-block">
+                                                                <form id = "formRegistration" class="dataentry_form form-horizontal was-validated" >
+                                                                    <div class="row">
+                                                                        <div class="col-lg-6 col-md-12">
+                                                                            <div class="form-group">
+                                                                                <h5>Type <span class="required">*</span></h5>
+                                                                                <div class="controls">
+                                                                                    <select id="inpRegistrationtype" name="interested" class="form-control" required>
+                                                                                        <option value="" selected="" disabled="">Select Type</option>
+                                                                                        <option value="Facilitator"> Facilitator </option>
+                                                                                        <option value="Participant">Trainee / Participant</option>
+                                                                                    </select>
+                                                                                    <div class="valid-feedback">Good to Go!</div>
+                                                                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                                                                    <div class="help-block"></div></div>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <h5>Name<span class="required">*</span></h5>
+                                                                                <div class="controls">
+                                                                                    <input id="inpRegistrationname" type="text" name="text" class="form-control inpName" value="" maxlength="100" required>
+                                                                                    <div class="valid-feedback">Good to Go!</div>
+                                                                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                                                                    <div class="help-block"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <h5>Gender <span class="required">*</span></h5>
+                                                                                <div class="controls">
+                                                                                    <select id="inpRegistrationgender" name="interested" class="form-control" required>
+                                                                                        <option value="" selected="" disabled="">Select Gender</option>
+                                                                                        <option value="Male"> Male </option>
+                                                                                        <option value="Female">Female</option>
+                                                                                    </select>
+                                                                                    <div class="valid-feedback">Good to Go!</div>
+                                                                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                                                                    <div class="help-block"></div></div>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <h5>Designation <span class="required">*</span></h5>
+                                                                                <div class="controls">
+                                                                                    <input type="text" id="inpRegistrationdesignation" class="form-control" maxlength="100" required>
+                                                                                    <div class="valid-feedback">Good to Go!</div>
+                                                                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                                                                    <div class="help-block"></div></div>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <h5>District <span class="required">*</span></h5>
+                                                                                <div class="controls">
+                                                                                    <select id="inpRegistrationdistrict" name="interested" class="form-control" maxlength="100" required>
+                                                                                        <option value="" selected="" disabled="">Select District</option>
+                                                                                        <option value="UpperDir"> Upper Dir </option>
+                                                                                        <option value="LowerDir">Lower Dir</option>
+                                                                                    </select>
+                                                                                    <div class="valid-feedback">Good to Go!</div>
+                                                                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                                                                    <div class="help-block"></div></div>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <h5>Tehsil <span class="required">*</span></h5>
+                                                                                <div class="controls">
+                                                                                    <input type="text" id="inpRegistrationtehsil" class="form-control" maxlength="100" required>
+                                                                                    <div class="valid-feedback">Good to Go!</div>
+                                                                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                                                                    <div class="help-block"></div></div>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <h5>Provider Attached <span class="required">*</span></h5>
+                                                                                <div class="controls">
+                                                                                    <input type="text" id="inpRegistrationfacilityName" class="form-control" maxlength="100" required>
+                                                                                    <div class="valid-feedback">Good to Go!</div>
+                                                                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                                                                    <div class="help-block"></div></div>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <h5>Contact Number <span class="required">*</span></h5>
+                                                                                <div class="controls">
+                                                                                    <input type="number" id="inpRegistrationcontactNumber" class="form-control" name="date" maxlength="14" required>
+                                                                                    <div class="valid-feedback">Good to Go!</div>
+                                                                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                                                                    <div class="help-block"></div></div>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <h5>National ID Card <span class="required">*</span></h5>
+                                                                                <div class="controls">
+                                                                                    <input type="number" id="inpRegistrationnic" class="form-control" name="date" min="1000000000000" max="9999999999999" required>
+                                                                                    <div class="valid-feedback">Good to Go!</div>
+                                                                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                                                                    <div class="help-block"></div></div>
+                                                                            </div>
+
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-lg-6 col-md-12">
+                                                                            <div class="block-button">
+                                                                                <a id="btnAddRegistration" data-tablename="Registration" data-columns="id*type*name*gender*designation*district*tehsil*facilityName*contactNumber*nic*UPDATE_BY*UPDATE_DATE" data-primarykeycolumn="ID" class="btn btn-success btn-lg btn-block btnAddUpdate" type="submit">Add</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                                <section class="extended">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-12">
+                                                                            <div class="card">
+                                                                                <div class="card-header">
+                                                                                    <div class="card-title-wrap bar-success">
+                                                                                        <h4 class="card-title">Data Entered</h4>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="card">
+                                                                                    <div class="card-body">
+                                                                                        <div id="registration_div_content" class="card-block">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </section>
+
+                                        <!-- Input Validation end -->
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab3" aria-labelledby="base-tabX3">
+                                <div class="content-wrapper">
+                                    <div class="container-fluid"><div class="row">
+                                        <div class="col-sm-12">
+                                            <h2 class="content-header">Theme</h2>
+                                        </div>
+                                    </div>
+                                        <!-- Input Validation start -->
+                                        <section class="input-validation">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <div class="card-block">
+                                                                <form id="formTheme" class="dataentry_form form-horizontal was-validated">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-6 col-md-12">
+                                                                            <div class="form-group">
+                                                                                <h5>Name of Theme <span class="required">*</span></h5>
+                                                                                <div class="controls">
+                                                                                    <input type="text" id="inpThemename" class="form-control" name="date" required>
+                                                                                    <div class="help-block"></div></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-lg-6 col-md-12">
+                                                                            <div class="block-button">
+                                                                                <a id="btnAddTheme" data-tablename="Theme" data-columns="id*name*UPDATE_BY*UPDATE_DATE" data-primarykeycolumn="ID" class="btn btn-success btn-lg btn-block btnAddUpdate">Add</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                                <section class="extended">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-12">
+                                                                            <div class="card">
+                                                                                <div class="card-header">
+                                                                                    <div class="card-title-wrap bar-success">
+                                                                                        <h4 class="card-title">Data Entered</h4>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="card">
+                                                                                    <div class="card-body">
+                                                                                        <div id="theme_div_content" class="card-block">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </section>
+
+                                        <!-- Input Validation end -->
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="modal hide" id="pleaseWaitDialog" data-backdrop="static" data-keyboard="false">
+                                <div class="modal-body">
+                                    <div id="ajax_loader">
+                                        <img src="app-assets/img/loader.gif" style="display: block; margin-left: auto; margin-right: auto;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Input Validation start -->
+
+
+                    <!-- Input Validation end -->
+                </div>
+
+            </div>
+
+        </section>
+        <section id="report_main_form" class="main-content hide_block">
+            <div class="content-wrapper">
+                <div class="container-fluid"><div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="content-header">Report</h2>
+                    </div>
+                </div>
+                    <div class="card">
+                        <div class="tab-content px-1 pt-1">
+                                <div class="content-wrapper">
+                                    <div class="container-fluid">
+
+                                            <div class="form-group">
+                                                <h5>From Date <span class="required">*</span></h5>
+                                                <div class="controls">
+                                                    <input type="date" id="inpFromDate" class="form-control" name="date" required>
+                                                    <div class="valid-feedback">Good to Go!</div>
+                                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <h5>To Date <span class="required">*</span></h5>
+                                                <div class="controls">
+                                                    <input type="date" id="inpToDate" class="form-control" name="date" required>
+                                                    <div class="valid-feedback">Good to Go!</div>
+                                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-12">
+                                                    <div class="block-button">
+                                                        <a id="btnShow" class="btn btn-success btn-lg btn-block btnAddUpdate" type="submit">Show</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="reportData" style="overflow-x:auto;">
+
+                                                </div>
+
+                                            </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <!-- Input Validation start -->
+
+
+                    <!-- Input Validation end -->
+                </div>
+
+            </div>
+
+        </section>
+    </div>
+
+</div>
+<!-- ////////////////////////////////////////////////////////////////////////////-->
+
+<aside id="notification-sidebar" class="notification-sidebar d-none d-sm-none d-md-block"><a class="notification-sidebar-close"><i class="ft-x font-medium-3"></i></a>
+    <div class="side-nav notification-sidebar-content">
+        <div class="row">
+            <div class="col-12 mt-1">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item"><a id="base-tab1" data-toggle="tab" aria-controls="base-tab1" href="#activity-tab" aria-expanded="true" class="nav-link active"><strong>Activity</strong></a></li>
+                    <li class="nav-item"><a id="base-tab2" data-toggle="tab" aria-controls="base-tab2" href="#settings-tab" aria-expanded="false" class="nav-link"><strong>Settings</strong></a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="activity-tab" role="tabpanel" aria-expanded="true" aria-labelledby="base-tab1" class="tab-pane active">
+                        <div id="activity-timeline" class="col-12 timeline-left">
+                            <h6 class="mt-1 mb-3 text-bold-400">RECENT ACTIVITY</h6>
+                            <div class="timeline">
+                                <ul class="list-unstyled base-timeline activity-timeline ml-0">
+                                    <li>
+                                        <div class="timeline-icon bg-danger"><i class="ft-shopping-cart"></i></div>
+                                        <div class="base-timeline-info"><a href="#" class="text-uppercase text-danger">Update</a><span class="d-block">Jim Doe Purchased new equipments for zonal office.</span></div><small class="text-muted">just now</small>
+                                    </li>
+                                    <li>
+                                        <div class="timeline-icon bg-primary"><i class="fa fa-plane"></i></div>
+                                        <div class="base-timeline-info"><a href="#" class="text-uppercase text-primary">Added</a><span class="d-block">Your Next flight for USA will be on 15th August 2015.</span></div><small class="text-muted">25 hours ago</small>
+                                    </li>
+                                    <li>
+                                        <div class="timeline-icon bg-dark"><i class="ft-mic"></i></div>
+                                        <div class="base-timeline-info"><a href="#" class="text-uppercase text-dark">Assined</a><span class="d-block">Natalya Parker Send you a voice mail for next conference.</span></div><small class="text-muted">15 days ago</small>
+                                    </li>
+                                    <li>
+                                        <div class="timeline-icon bg-warning"><i class="ft-map-pin"></i></div>
+                                        <div class="base-timeline-info"><a href="#" class="text-uppercase text-warning">New</a><span class="d-block">Jessy Jay open a new store at S.G Road.</span></div><small class="text-muted">20 days ago</small>
+                                    </li>
+                                    <li>
+                                        <div class="timeline-icon bg-primary"><i class="ft-inbox"></i></div>
+                                        <div class="base-timeline-info"><a href="#" class="text-uppercase text-primary">Added</a><span class="d-block">voice mail for conference.</span></div><small class="text-muted">2 Week Ago</small>
+                                    </li>
+                                    <li>
+                                        <div class="timeline-icon bg-danger"><i class="ft-mic"></i></div>
+                                        <div class="base-timeline-info"><a href="#" class="text-uppercase text-danger">Update</a><span class="d-block">Natalya Parker Jessy Jay open a new store at S.G Road.</span></div><small class="text-muted">1 Month Ago</small>
+                                    </li>
+                                    <li>
+                                        <div class="timeline-icon bg-dark"><i class="ft-inbox"></i></div>
+                                        <div class="base-timeline-info"><a href="#" class="text-uppercase text-dark">Assined</a><span class="d-block">Natalya Parker Send you a voice mail for Updated conference.</span></div><small class="text-muted">1 Month ago</small>
+                                    </li>
+                                    <li>
+                                        <div class="timeline-icon bg-warning"><i class="ft-map-pin"></i></div>
+                                        <div class="base-timeline-info"><a href="#" class="text-uppercase text-warning">New</a><span class="d-block">Started New project with Jessie Lee.</span></div><small class="text-muted">2 Month ago</small>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="settings-tab" aria-labelledby="base-tab2" class="tab-pane">
+                        <div id="settings" class="col-12">
+                            <h6 class="mt-1 mb-3 text-bold-400">GENERAL SETTINGS</h6>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <div class="togglebutton">
+                                        <div class="switch"><span class="text-bold-500">Notifications</span>
+                                            <div class="float-right">
+                                                <div class="form-group">
+                                                    <div class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+                                                        <input id="notifications1" checked="checked" type="checkbox" class="custom-control-input">
+                                                        <label for="notifications1" class="custom-control-label"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>Use checkboxes when looking for yes or no answers.</p>
+                                </li>
+                                <li>
+                                    <div class="togglebutton">
+                                        <div class="switch"><span class="text-bold-500">Show recent activity</span>
+                                            <div class="float-right">
+                                                <div class="form-group">
+                                                    <div class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+                                                        <input id="recent-activity1" checked="checked" type="checkbox" class="custom-control-input">
+                                                        <label for="recent-activity1" class="custom-control-label"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>The for attribute is necessary to bind our custom checkbox with the input.</p>
+                                </li>
+                                <li>
+                                    <div class="togglebutton">
+                                        <div class="switch"><span class="text-bold-500">Notifications</span>
+                                            <div class="float-right">
+                                                <div class="form-group">
+                                                    <div class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+                                                        <input id="notifications2" type="checkbox" class="custom-control-input">
+                                                        <label for="notifications2" class="custom-control-label"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>Use checkboxes when looking for yes or no answers.</p>
+                                </li>
+                                <li>
+                                    <div class="togglebutton">
+                                        <div class="switch"><span class="text-bold-500">Show recent activity</span>
+                                            <div class="float-right">
+                                                <div class="form-group">
+                                                    <div class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+                                                        <input id="recent-activity2" type="checkbox" class="custom-control-input">
+                                                        <label for="recent-activity2" class="custom-control-label"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>The for attribute is necessary to bind our custom checkbox with the input.</p>
+                                </li>
+                                <li>
+                                    <div class="togglebutton">
+                                        <div class="switch"><span class="text-bold-500">Show your emails</span>
+                                            <div class="float-right">
+                                                <div class="form-group">
+                                                    <div class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+                                                        <input id="show-emails" type="checkbox" class="custom-control-input">
+                                                        <label for="show-emails" class="custom-control-label"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>Use checkboxes when looking for yes or no answers.</p>
+                                </li>
+                                <li>
+                                    <div class="togglebutton">
+                                        <div class="switch"><span class="text-bold-500">Show Task statistics</span>
+                                            <div class="float-right">
+                                                <div class="form-group">
+                                                    <div class="custom-control custom-checkbox mb-2 mr-sm-2 mb-sm-0">
+                                                        <input id="show-stats" checked="checked" type="checkbox" class="custom-control-input">
+                                                        <label for="show-stats" class="custom-control-label"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>The for attribute is necessary to bind our custom checkbox with the input.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>
+<!-- BEGIN VENDOR JS-->
+<script src="./app-assets/vendors/js/core/jquery-3.3.1.min.js"></script>
+<script src="./app-assets/vendors/js/core/popper.min.js"></script>
+<script src="./app-assets/vendors/js/core/bootstrap.min.js"></script>
+<script src="./app-assets/vendors/js/perfect-scrollbar.jquery.min.js"></script>
+<script src="./app-assets/vendors/js/prism.min.js"></script>
+<script src="./app-assets/vendors/js/jquery.matchHeight-min.js"></script>
+<script src="./app-assets/vendors/js/screenfull.min.js"></script>
+<script src="./app-assets/vendors/js/pace/pace.min.js"></script>
+<!-- BEGIN VENDOR JS-->
+<!-- BEGIN PAGE VENDOR JS-->
+<script src="./app-assets/vendors/js/chartist.min.js"></script>
+<!-- END PAGE VENDOR JS-->
+<!-- BEGIN CONVEX JS-->
+<script src="./app-assets/js/app-sidebar.js"></script>
+<!-- END CONVEX JS-->
+<!-- BEGIN PAGE LEVEL JS-->
+<script src="./app-assets/js/dashboard-ecommerce.js"></script>
+<!-- END PAGE LEVEL JS-->
+<script>
+    function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+        /* Loop through a collection of all HTML elements: */
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+                /* Make an HTTP request using the attribute value as the file name: */
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                        /* Remove the attribute, and call this function once more: */
+                        elmnt.removeAttribute("w3-include-html");
+                        includeHTML();
+                    }
+                }
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                /* Exit the function: */
+                return;
+            }
+        }
+    }
+</script>
+<!-- BEGIN CONVEX JS-->
+<script src="./app-assets/js/notification-sidebar.js"></script>
+<!-- END CONVEX JS-->
+<!-- BEGIN PAGE LEVEL JS-->
+<script src="./app-assets/js/dashboard-ecommerce.js"></script>
+<!-- BEGIN VENDOR JS-->
+<script>
+    function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+        /* Loop through a collection of all HTML elements: */
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+                /* Make an HTTP request using the attribute value as the file name: */
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                        /* Remove the attribute, and call this function once more: */
+                        elmnt.removeAttribute("w3-include-html");
+                        includeHTML();
+                    }
+                }
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                /* Exit the function: */
+                return;
+            }
+        }
+    }
+</script>
+<!-- BEGIN VENDOR JS-->
+<!-- BEGIN PAGE VENDOR JS-->
+<!-- END PAGE VENDOR JS-->
+<!-- BEGIN CONVEX JS-->
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+
+<!-- (Optional) Latest compiled and minified JavaScript translation files -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/i18n/defaults-*.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+
+<script src="./app-assets/js/app-sidebar.js"></script>
+<script src="./app-assets/vendors/js/sweetalert2.min.js"></script>
+<!-- END CONVEX JS-->
+<!-- BEGIN PAGE LEVEL JS-->
+<script src="./app-assets/js/toastr.min.js"></script>
+<script src="./app-assets/vendors/js/toastr.min.js"></script>
+<!-- END CONVEX JS-->
+<!-- BEGIN PAGE LEVEL JS-->
+<!-- END PAGE LEVEL JS-->
+<script src="./assets/js/common.js"></script>
+<script src="./assets/js/admin_main_page_generic.js"></script>
+<script src="./assets/js/admin_main_page.js"></script>
+<script src="./assets/js/menu.js"></script>
+<script src="./app-assets/vendors/js/datatable/datatables.min.js"></script>
+<script src="./app-assets/vendors/js/datatable/pdfmake.min.js"></script>
+<script src="./app-assets/js/data-tables/datatable-basic.js"></script>
+<script src="app-assets/js/components-modal.min.js"></script>
+<script src="./assets/js/dataentry.js"></script>
+<script src="./assets/js/side_menu.js"></script>
+</body>
+</html>

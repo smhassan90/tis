@@ -1,0 +1,94 @@
+.left-side{
+    padding: 10px;
+}
+.div_person{
+    width: 300px;
+    height:300px;
+    border: 3px solid #2B3990 ;
+    background-image: url(../../app-assets/img/portrait/small/avatarMale.jpg);
+    background-size: 300px;
+    border-radius: 150px;
+}
+.person_info {
+    color: #000000;
+    margin: 35px;
+}
+.max_heading{
+    color: #2b3990;
+    font-weight: bold;
+}
+
+.text_below{
+    color: #000000;
+    font-size: 23px;
+    line-height: 2;
+    font-weight: 400;
+    font-family: 'Montserrat';
+}
+.award_price{
+    background-size: 250px;
+    background-image: url(../img/ribbon_img.png);
+    width: 250px;
+    height: 90px;
+    color: white;
+    padding: 37px;
+    font-size: 36px;
+}
+.header_logos{
+
+}
+.top_left_logo{
+    width: 250px;
+    height: 100px;
+    left: 30px;
+    top: 10px;
+    position: absolute;
+    background-size: 250px;
+    background-image: url(../img/img_greenstarlogo.png);
+}
+.top_right_logo{
+    width: 250px;
+    height: 95px;
+    top:30px;
+    right: 30px;
+    position: absolute;
+    background-size: 250px;
+    background-image: url(../img/img_hawklogo.png);
+}
+.main_card{
+    margin-top:160px;
+}
+.middle_prod_img{
+    width: 632px;
+    height: 119px;
+    background-size: 636px;
+    background-image: url(../img/img_touch_prod.png);
+}
+@media only screen and (max-width: 600px) {
+    .chartAreaWrapper {
+        width: 800px;
+    }
+  }
+.bioCard{
+    border: 2px solid rgb(184, 184, 184)
+}
+.ytdcards{
+    border: 2px solid rgb(209, 161, 4)
+}
+.mtdcards{
+    border: 2px solid rgb(180, 114, 158)
+}
+.tableborder{
+    border: 2px solid rgb(175,175,175)
+}
+.graphborder{
+    border: 2px solid rgb(220, 226, 130)
+}
+.iconBull{
+    background: url("../../app-assets/img/icons/target_small.png");
+    height: 67px;
+    width: 67px;
+    display: block;
+    
+    /* Other styles here */
+}

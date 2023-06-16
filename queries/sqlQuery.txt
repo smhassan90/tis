@@ -1,0 +1,194 @@
+
+
+CREATE TABLE user (
+    ID int NOT NULL AUTO_INCREMENT,
+    NAME varchar(255) NOT NULL,
+    USERNAME varchar(255),
+	PASSWORD varchar(255),
+	EMAIL varchar(255),
+	PHONENUMBER varchar(255),
+    TYPE int,
+	STATUS int,
+	ROLE int,
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE role (
+    ID int NOT NULL AUTO_INCREMENT,
+    NAME varchar(255) NOT NULL,
+    PRIMARY KEY (ID)
+);
+
+
+
+CREATE TABLE LOGINSTATUS (
+    ID int NOT NULL AUTO_INCREMENT,
+    USERNAME varchar(255),
+    TOKEN varchar(255),
+    TYPE int,
+	STATUS int,
+    PRIMARY KEY ( ID)
+);
+
+
+CREATE TABLE FS_CUSTOMER (
+    CUST_CODE varchar(255) NOT NULL,
+    CUST_NAME varchar(255),
+    CUST_ADD varchar(255),
+	TYPE varchar(255),
+  
+    PRIMARY KEY ( CUST_CODE)
+);
+
+
+CREATE TABLE FS_DEPO (
+    DEPO_CODE varchar(255) NOT NULL,
+    DEPO_NAME varchar(255),
+    PRIMARY KEY ( DEPO_CODE)
+);
+
+
+
+
+CREATE TABLE FS_DEPO_STAFF (
+    DEPO_ID varchar(255) NOT NULL,
+    STAFF_CODE varchar(255),
+    PRIMARY KEY ( DEPO_ID)
+);
+
+
+
+
+
+CREATE TABLE FS_LEAVE_REQUEST (
+    ID int NOT NULL AUTO_INCREMENT,
+    LEAVE_DATE varchar(255),
+    REASON varchar(255),
+    SAVE_TIME varchar(255),
+	SYNCDATE varchar(255),
+	STAFF_CODE varchar(255),
+    PRIMARY KEY ( ID)
+);
+
+
+
+CREATE TABLE FS_ORDER (
+    ID int NOT NULL AUTO_INCREMENT,
+    CUST_CODE varchar(255),
+	STATUS_ID int,
+    STAFF_CODE varchar(255),
+    UPDATE_DATE varchar(255),
+	VISIT_DATE varchar(255),
+	lat_lon varchar(255),
+	comments varchar(255),
+	workWith varchar(255),
+    PRIMARY KEY ( ID)
+);
+
+
+
+
+CREATE TABLE FS_PRODUCT_ORDER (
+    ID int NOT NULL AUTO_INCREMENT,
+    NAME varchar(255),
+	ORDER_ID int,
+    PRODUCT_ID varchar(255),
+	quantity int,
+    PRIMARY KEY ( ID)
+);
+
+
+CREATE TABLE SD_STAFF (
+    STAFF_CODE varchar(255) NOT NULL,
+    STAFF_NAME varchar(255),
+    PRIMARY KEY ( STAFF_CODE)
+);
+
+
+CREATE TABLE FS_SKU_GRP (
+    GRP_ID varchar(255) NOT NULL,
+    GRP_NAME varchar(255),
+    PRIMARY KEY (GRP_ID)
+);
+
+
+CREATE TABLE FS_STATUS (
+    ID int NOT NULL AUTO_INCREMENT,
+    STATUS varchar(255),
+    PRIMARY KEY ( ID)
+);
+
+
+
+
+CREATE TABLE FS_TOWN (
+    TOWN_ID varchar(255) NOT NULL,
+    TOWN_NAME varchar(255),
+    PRIMARY KEY ( TOWN_ID)
+);
+
+
+CREATE TABLE FS_TOWN_CUSTOMER (
+    CUSTOMER_ID varchar(255) NOT NULL,
+    TOWN_ID varchar(255),
+    PRIMARY KEY ( CUSTOMER_ID)
+);
+
+CREATE TABLE FS_TOWN_DEPO (
+    TOWN_ID varchar(255) NOT NULL,
+    DEPO_ID varchar(255),
+    PRIMARY KEY ( TOWN_ID)
+);
+
+CREATE TABLE FS_TOWN_STAFF (
+    TOWN_ID varchar(255) NOT NULL,
+    STAFF_CODE varchar(255),
+    PRIMARY KEY ( TOWN_ID)
+);
+
+CREATE TABLE FS_WORKWITH (
+    ID int NOT NULL AUTO_INCREMENT,
+    WORK_WITH varchar(255),
+    PRIMARY KEY ( ID)
+);
+
+CREATE TABLE SD_UNAPPROVED_CUSTOMER (
+    ID int NOT NULL AUTO_INCREMENT,
+    ADDRESS varchar(255),
+    NAME varchar(255),
+    CUST_CODE varchar(255),
+	LAT_LONG varchar(255),
+	STAFF_CODE varchar(255),
+	STATUS int,
+	SAVE_TIME varchar(255),
+	DOC varchar(255),
+    PRIMARY KEY ( ID)
+);
+
+CREATE TABLE BASE_CHANNEL (
+    ID int NOT NULL,
+    NAME varchar(255),
+	UPDATE_DATE  TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY ( ID)
+);
+
+CREATE TABLE BASE_TERRITORY_MASTER (
+    ID varchar(255) NOT NULL,
+    NAME varchar(255),
+	UPDATE_DATE  TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY ( ID)
+);
+
+INSERT INTO BASE_CHANNEL (ID,NAME) values (1,"FMCG");
+INSERT INTO BASE_CHANNEL (ID,NAME) values (2,"Pharmacies");
+INSERT INTO BASE_CHANNEL (ID,NAME) values (3,"Provider");
+
+
+// Queries
+INSERT INTO ROLE (name) values ("admin");
+INSERT INTO ROLE (name) values ("ASM");
+INSERT INTO ROLE (name) values ("RSM");
+INSERT INTO ROLE (name) values ("head");
+
+//User
+INSERT INTO `user` (`ID`, `NAME`, `USERNAME`, `PASSWORD`, `EMAIL`, `PHONENUMBER`, `TYPE`, `STATUS`, `ROLE`) VALUES (NULL, 'admin', 'admin', 'pass123', 'admin@admin.com', '03323332221', '1', '1', '1');
