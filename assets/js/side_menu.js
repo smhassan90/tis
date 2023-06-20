@@ -1,4 +1,42 @@
 
+$(document).ready(function(){
+    populateBasicData();
+});
+$('#dashboard_menu').click(function(){
+    populateBasicData();
+});
+
+function populateBasicData(){
+    var dataJSON = {"token":getCookie("token")};
+    var url= AllConstant.baseURL + "/getBasicData";
+    $('#pleaseWaitDialog').modal();
+    $.ajax({
+        type: "GET",
+        url: url,
+        contentType: "application/json",
+        data:dataJSON,
+        dataType: "text",
+        success: function (data) {
+            $('#pleaseWaitDialog').modal('hide');
+            var deleteResponse = JSON.parse(data);
+            if(deleteResponse.status==="200"){
+                var basicData = JSON.parse(deleteResponse.data);
+                populateDashboard(basicData);
+            }else{
+                toastr.error("ERROR!","Something Went Wrong!");
+            }
+        },
+        error: function (data) {
+            $('#pleaseWaitDialog').modal('hide');
+            toastr.error("ERROR!","Unsuccessful entry because of undefined error!");
+        }
+    });
+}
+
+function populateDashboard(basicData){
+    $('#totalTrainings').html(basicData.totalTrainings);
+    $('#totalParticipants').html(basicData.totalParticipants);
+}
 
 $('.btnAddParticipants').click(function(){
     var tablename = $(this).attr("data-tablename");
@@ -132,7 +170,7 @@ function populateTable(data){
         "                                            <th class=\"border-top-0\">National ID Card</th>\n" +
         "                                            <th class=\"border-top-0\">Pre-Score</th>\n" +
         "                                            <th class=\"border-top-0\">Post-Score</th>\n" +
-        "                                            <th class=\"border-top-0\">Post-Score</th>\n" +
+        "                                            <th class=\"border-top-0\">%-Improvement</th>\n" +
         "                                            <th class=\"border-top-0\">Organized By</th>\n" +
 
 

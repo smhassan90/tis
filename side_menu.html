@@ -51,7 +51,7 @@
                         <a id="dashboard_menu"  data-tablename="dashboard" data-primarykeycolumn="ID" class="menu-item"><i class="icon-home"></i><span data-i18n="" class="menu-title">Dashboard</span></a>
                     </li>
                     <li class="nav-item">
-                        <a id="training_menu"  data-tablename="training" data-primarykeycolumn="ID" class="menu-item"><i class="ft-activity"></i><span data-i18n="" class="menu-title">Add Training</span></a>
+                        <a id="training_menu"  data-tablename="training" data-primarykeycolumn="ID" class="menu-item"><i class="ft-activity"></i><span data-i18n="" class="menu-title">Data Recording</span></a>
                     </li>
                     <li class="nav-item">
                         <a id="report_menu"  data-tablename="report" class="menu-item"><i class="fa-regular fa-clipboard"></i><span data-i18n="" class="menu-title">Reports</span></a>
@@ -113,7 +113,7 @@
                                                 <i class="icon-pencil text-white font-large-2 float-left"></i>
                                             </div>
                                             <div class="media-body text-white text-right">
-                                                <h3 class="text-white">15</h3>
+                                                <h3 id="totalTrainings" class="text-white"></h3>
                                                 <span>Training Forms</span>
                                             </div>
                                         </div>
@@ -130,7 +130,7 @@
                                                 <i class="icon-user text-white font-large-2 float-left"></i>
                                             </div>
                                             <div class="media-body text-white text-right">
-                                                <h3 class="text-white">11</h3>
+                                                <h3 id="totalParticipants" class="text-white"></h3>
                                                 <span>Registered Participants</span>
                                             </div>
                                         </div>
@@ -160,7 +160,7 @@
                                 <a class="nav-link" id="base-tabX1" data-toggle="tab" aria-controls="tab1" href="#tab1" aria-expanded="false">Training Form</a>
                             </li>
                             <li class="nav-item dataentry-tab" data-tablename="Registration" data-primarykeycolumn="ID">
-                                <a class="nav-link" id="base-tabX2" data-toggle="tab" aria-controls="tab2" href="#tab2" aria-expanded="false">Registration</a>
+                                <a class="nav-link" id="base-tabX2" data-toggle="tab" aria-controls="tab2" href="#tab2" aria-expanded="false">Participant Registration</a>
                             </li>
                             <li class="nav-item dataentry-tab" data-tablename="Theme" data-primarykeycolumn="ID">
                                 <a class="nav-link" id="base-tabX3" data-toggle="tab" aria-controls="tab3" href="#tab3" aria-expanded="false">Theme</a>
@@ -222,9 +222,9 @@
                                                                             </div>
 
                                                                             <div class="form-group">
-                                                                                <h5>Total Score <span class="required">*</span></h5>
+                                                                                <h5>Number of Questions in the test <span class="required">*</span></h5>
                                                                                 <div class="controls">
-                                                                                    <input type="number" id="inpTrainingtotalScore" class="form-control" name="date" required>
+                                                                                    <input inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" id="inpTrainingtotalScore" maxlength="3" class="form-control" name="date" required autocomplete="off">
                                                                                     <div class="valid-feedback">Good to Go!</div>
                                                                                     <div class="invalid-feedback">Please fill out this field.</div>
                                                                                 </div>
@@ -237,18 +237,18 @@
                                                                                 </div>
                                                                                 <div class="controls">
                                                                                     <div class="form-group">
-                                                                                        <h5>Partipant's Pre-Score <span class="required">*</span></h5>
+                                                                                        <h5>Participant's Pre-Score <span class="required">*</span></h5>
                                                                                         <div class="controls">
-                                                                                            <input id="inpTrainingParticipantMappingpreScore" type="number" name="text" value="0" class="form-control" required data-validation-required-message="This field is required">
+                                                                                            <input id="inpTrainingParticipantMappingpreScore" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"  maxlength="3" name="text" value="0" class="form-control" required data-validation-required-message="This field is required" autocomplete="off">
 
                                                                                             <div class="valid-feedback">Good to Go!</div>
                                                                                             <div class="invalid-feedback">Please fill out this field.</div>
                                                                                         </div>
                                                                                     </div>
                                                                                     <div class="form-group">
-                                                                                        <h5>Partipant's Post-Score <span class="required">*</span></h5>
+                                                                                        <h5>Participant's Post-Score <span class="required">*</span></h5>
                                                                                         <div class="controls">
-                                                                                            <input id="inpTrainingParticipantMappingpostScore" type="number" name="text" value="0" class="form-control" required data-validation-required-message="This field is required">
+                                                                                            <input id="inpTrainingParticipantMappingpostScore" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" maxlength="3" name="text" value="0" class="form-control" required data-validation-required-message="This field is required" autocomplete="off">
 
                                                                                             <div class="valid-feedback">Good to Go!</div>
                                                                                             <div class="invalid-feedback">Please fill out this field.</div>
@@ -273,7 +273,7 @@
                                                                             <div class="form-group">
                                                                                 <h5>Training Organized By <span class="required">*</span></h5>
                                                                                 <div class="controls">
-                                                                                    <input id="inpTrainingorganizedBy" type="text" name="text" class="form-control" required data-validation-required-message="This field is required">
+                                                                                    <input id="inpTrainingorganizedBy" type="text" name="text" class="form-control" required data-validation-required-message="This field is required" autocomplete="off">
 
                                                                                     <div class="valid-feedback">Good to Go!</div>
                                                                                     <div class="invalid-feedback">Please fill out this field.</div>
@@ -358,7 +358,7 @@
                                                                             <div class="form-group">
                                                                                 <h5>Name<span class="required">*</span></h5>
                                                                                 <div class="controls">
-                                                                                    <input id="inpRegistrationname" type="text" name="text" class="form-control inpName" value="" maxlength="100" required>
+                                                                                    <input id="inpRegistrationname" type="text" name="text" class="form-control inpName" value="" maxlength="100" required autocomplete="off">
                                                                                     <div class="valid-feedback">Good to Go!</div>
                                                                                     <div class="invalid-feedback">Please fill out this field.</div>
                                                                                     <div class="help-block"></div>
@@ -379,7 +379,7 @@
                                                                             <div class="form-group">
                                                                                 <h5>Designation <span class="required">*</span></h5>
                                                                                 <div class="controls">
-                                                                                    <input type="text" id="inpRegistrationdesignation" class="form-control" maxlength="100" required>
+                                                                                    <input type="text" id="inpRegistrationdesignation" class="form-control" maxlength="100" required autocomplete="off">
                                                                                     <div class="valid-feedback">Good to Go!</div>
                                                                                     <div class="invalid-feedback">Please fill out this field.</div>
                                                                                     <div class="help-block"></div></div>
@@ -399,13 +399,13 @@
                                                                             <div class="form-group">
                                                                                 <h5>Tehsil <span class="required">*</span></h5>
                                                                                 <div class="controls">
-                                                                                    <input type="text" id="inpRegistrationtehsil" class="form-control" maxlength="100" required>
+                                                                                    <input type="text" id="inpRegistrationtehsil" class="form-control" maxlength="100" required autocomplete="off">
                                                                                     <div class="valid-feedback">Good to Go!</div>
                                                                                     <div class="invalid-feedback">Please fill out this field.</div>
                                                                                     <div class="help-block"></div></div>
                                                                             </div>
                                                                             <div class="form-group">
-                                                                                <h5>Provider Attached <span class="required">*</span></h5>
+                                                                                <h5>Facility to which provider is attached <span class="required">*</span></h5>
                                                                                 <div class="controls">
                                                                                     <input type="text" id="inpRegistrationfacilityName" class="form-control" maxlength="100" required>
                                                                                     <div class="valid-feedback">Good to Go!</div>
@@ -415,7 +415,7 @@
                                                                             <div class="form-group">
                                                                                 <h5>Contact Number <span class="required">*</span></h5>
                                                                                 <div class="controls">
-                                                                                    <input type="number" id="inpRegistrationcontactNumber" class="form-control" name="date" maxlength="14" required>
+                                                                                    <input inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" id="inpRegistrationcontactNumber" class="form-control" name="date" maxlength="11" required autocomplete="off">
                                                                                     <div class="valid-feedback">Good to Go!</div>
                                                                                     <div class="invalid-feedback">Please fill out this field.</div>
                                                                                     <div class="help-block"></div></div>
@@ -423,7 +423,7 @@
                                                                             <div class="form-group">
                                                                                 <h5>National ID Card <span class="required">*</span></h5>
                                                                                 <div class="controls">
-                                                                                    <input type="number" id="inpRegistrationnic" class="form-control" name="date" min="1000000000000" max="9999999999999" required>
+                                                                                    <input inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" id="inpRegistrationnic" class="form-control" name="date" maxlength="13" minlength="13" required autocomplete="off">
                                                                                     <div class="valid-feedback">Good to Go!</div>
                                                                                     <div class="invalid-feedback">Please fill out this field.</div>
                                                                                     <div class="help-block"></div></div>
@@ -495,7 +495,7 @@
                                                                             <div class="form-group">
                                                                                 <h5>Name of Theme <span class="required">*</span></h5>
                                                                                 <div class="controls">
-                                                                                    <input type="text" id="inpThemename" class="form-control" name="date" required>
+                                                                                    <input type="text" id="inpThemename" class="form-control" name="date" required autocomplete="off">
                                                                                     <div class="help-block"></div></div>
                                                                             </div>
                                                                         </div>
@@ -597,6 +597,13 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-12">
+                                                <div class="block-button">
+                                                    <a id="btnDownload" href="http://localhost:81/tis/reports/report.csv" class="btn btn-success btn-lg btn-block btnAddUpdate" type="submit">Download to Excel</a>
+                                                </div>
+                                            </div>
+                                        </div>
                                             <div class="row">
                                                 <div class="reportData" style="overflow-x:auto;">
 
