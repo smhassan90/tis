@@ -372,7 +372,7 @@ function getSelectSelectorID(tablename, dropdown1) {
 function populateDropDown(tablename, dropdown1, keyValueList) {
     var seletSelectorID = getSelectSelectorID(tablename,dropdown1);
     $('.div'+tablename+dropdown1).html('');
-    var html = "<select id=\"inp"+tablename+dropdown1+"\" data-ispopulated='true' name=\"interested\" class=\"form-control "+tablename.lowerCase+"_"+dropdown1.lowerCase+"_select \" data-show-subtext=\"true\" >";
+    var html = "<select id=\"inp"+tablename+dropdown1+"\"  name=\"interested\" class=\"form-control "+tablename.lowerCase+"_"+dropdown1.lowerCase+"_select \" data-show-subtext=\"true\" >";
 
     // var html = "";
     for(var i=0; i<keyValueList.length; i++){

@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="457e0a13-5b0d-4c65-ac3b-d9ebcc8550d1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/admin_main_page_generic.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/admin_main_page_generic.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/side_menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/side_menu.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,8 +30,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/side_menu.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="349" column="125" selection-start-line="349" selection-start-column="125" selection-end-line="349" selection-end-column="125" />
+            <state relative-caret-position="262">
+              <caret line="189" column="114" selection-start-line="189" selection-start-column="96" selection-end-line="189" selection-end-column="114" />
               <folding>
                 <element signature="n#section#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -50,8 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/common.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+            <state relative-caret-position="51">
+              <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -59,7 +57,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/side_menu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2720">
+            <state relative-caret-position="830">
               <caret line="160" column="94" selection-start-line="160" selection-start-column="94" selection-end-line="160" selection-end-column="94" />
               <folding>
                 <element signature="n#style#0;n#i#0;n#li#0;n#!!top" expanded="true" />
@@ -85,8 +83,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/admin_main_page_generic.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+            <state relative-caret-position="289">
+              <caret line="374" column="58" selection-start-line="374" selection-start-column="58" selection-end-line="374" selection-end-column="58" />
               <folding>
                 <element signature="n#style#0;n#th#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#th#0;n#!!top" expanded="true" />
@@ -99,7 +97,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>coach</find>
       <find>coachId</find>
       <find>btnAddParticipants</find>
       <find>participantList</find>
@@ -129,6 +126,7 @@
       <find>Contact</find>
       <find>valid</find>
       <find>facilityName</find>
+      <find>Select The</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -139,9 +137,9 @@
       <list>
         <option value="$PROJECT_DIR$/assets/js/menu.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/assets/js/common.js" />
         <option value="$PROJECT_DIR$/assets/js/side_menu.js" />
         <option value="$PROJECT_DIR$/side_menu.html" />
+        <option value="$PROJECT_DIR$/assets/js/common.js" />
         <option value="$PROJECT_DIR$/assets/js/admin_main_page_generic.js" />
       </list>
     </option>
@@ -248,17 +246,18 @@
       <workItem from="1687244153267" duration="930000" />
       <workItem from="1687253338760" duration="1075000" />
       <workItem from="1687289207778" duration="5185000" />
+      <workItem from="1687319405812" duration="1851000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53650000" />
+    <option name="totallyTimeSpent" value="55501000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19989339" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20202559" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -299,13 +298,11 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/assets/js/admin_main_page_generic.js</url>
           <line>7</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/assets/js/admin_main_page_generic.js</url>
           <line>25</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
@@ -319,6 +316,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app-assets/vendors/js/jquery.validate.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="3" column="1197" selection-start-line="3" selection-start-column="1197" selection-end-line="3" selection-end-column="1197" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/login.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -329,29 +333,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/dashboard.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard.html">
+    <entry file="file://$PROJECT_DIR$/assets/js/admin_main_page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app-assets/vendors/js/jquery.validate.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="3" column="1197" selection-start-line="3" selection-start-column="1197" selection-end-line="3" selection-end-column="1197" />
+        <state relative-caret-position="51">
+          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/side_menu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2720">
+        <state relative-caret-position="830">
           <caret line="160" column="94" selection-start-line="160" selection-start-column="94" selection-end-line="160" selection-end-column="94" />
           <folding>
             <element signature="n#style#0;n#i#0;n#li#0;n#!!top" expanded="true" />
@@ -361,8 +365,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/side_menu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="349" column="125" selection-start-line="349" selection-start-column="125" selection-end-line="349" selection-end-column="125" />
+        <state relative-caret-position="262">
+          <caret line="189" column="114" selection-start-line="189" selection-start-column="96" selection-end-line="189" selection-end-column="114" />
           <folding>
             <element signature="n#section#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -370,17 +374,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/admin_main_page.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/admin_main_page_generic.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+        <state relative-caret-position="289">
+          <caret line="374" column="58" selection-start-line="374" selection-start-column="58" selection-end-line="374" selection-end-column="58" />
           <folding>
             <element signature="n#style#0;n#th#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#0;n#!!top" expanded="true" />
