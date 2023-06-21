@@ -30,7 +30,7 @@
         <entry file="file://$PROJECT_DIR$/side_menu.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="619">
-              <caret line="50" column="193" selection-start-line="50" selection-start-column="193" selection-end-line="50" selection-end-column="193" />
+              <caret line="50" column="192" selection-start-line="50" selection-start-column="192" selection-end-line="50" selection-end-column="192" />
               <folding>
                 <element signature="n#section#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -243,12 +243,12 @@
       <workItem from="1687253338760" duration="1075000" />
       <workItem from="1687289207778" duration="5185000" />
       <workItem from="1687319405812" duration="2149000" />
-      <workItem from="1687360425880" duration="585000" />
+      <workItem from="1687360425880" duration="1005000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56384000" />
+    <option name="totallyTimeSpent" value="56804000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1048" extended-state="6" />
@@ -371,7 +371,7 @@
     <entry file="file://$PROJECT_DIR$/side_menu.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="619">
-          <caret line="50" column="193" selection-start-line="50" selection-start-column="193" selection-end-line="50" selection-end-column="193" />
+          <caret line="50" column="192" selection-start-line="50" selection-start-column="192" selection-end-line="50" selection-end-column="192" />
           <folding>
             <element signature="n#section#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#section#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
