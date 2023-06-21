@@ -1,6 +1,9 @@
 
 $(document).ready(function(){
     populateBasicData();
+    $('#training_menu').click(function(){
+        $("#base-tabX1").trigger("click");
+    });
 });
 $('#dashboard_menu').click(function(){
     populateBasicData();

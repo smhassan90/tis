@@ -6,6 +6,22 @@ $(document).ready(function(){
         var tablename = $(this).attr("data-tablename");
         var primarykey = $(this).attr("data-primarykeycolumn");
         if($('#form'+tablename).valid()){
+            if(tablename==='Registration') {
+                $("#formRegistration").validate({
+                    rules: {
+                        name: {
+                            required: true,
+                            minlength: 3
+                        },
+                        gender: {
+                            required: true
+                        },
+                    },
+                    submitHandler: function(form) {
+                        alert('validated');
+                    }
+                });
+            }
             var json = getJSON(this);
             var dataJSON = {"tablename":tablename,"data":json};
             $('#pleaseWaitDialog').modal();
